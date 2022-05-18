@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    tools:context=".presentation.ui.fragments.main.anime.detailed.AnimeDetailedFragment">
+
+    <ImageView
+        android:id="@+id/im_horisont"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:contentDescription="@string/image_for_anime_s_cover_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_poster_image_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="90dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_start"
+        android:layout_width="15dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="25dp" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_back_vertic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:elevation="10dp"
+        android:translationZ="1dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="@id/g_start"
+        app:layout_constraintTop_toBottomOf="@id/g_poster_image_margin"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp">
+
+        <ImageView
+            android:id="@+id/im_vertic"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/anime_s_poster"
+            tools:src="@tools:sample/avatars" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="155dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="135dp" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/helvetica_regular"
+        android:text="@string/tv"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/g_type"
+        app:layout_constraintTop_toBottomOf="@id/im_horisont" />
+
+    <TextView
+        android:id="@+id/tv_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/helvetica_regular"
+        android:text="@string/bullet_point"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_year"
+        app:layout_constraintStart_toEndOf="@id/tv_type"
+        app:layout_constraintTop_toBottomOf="@id/im_horisont" />
+
+    <TextView
+        android:id="@+id/tv_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/helvetica_regular"
+        android:text="@string/_2017"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/tv_type"
+        app:layout_constraintTop_toBottomOf="@id/im_horisont" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/g_type"
+        app:layout_constraintTop_toBottomOf="@id/tv_type"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_descrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/helvetica_regular"
+        android:text="@string/it_is_a_really_long_text_even_you_are_not_gonna_catch_up_with_me_typing_this"
+        android:textColor="@color/white"
+        android:textSize="1sp"
+        app:layout_constraintStart_toStartOf="@id/g_start"
+        app:layout_constraintTop_toBottomOf="@id/cv_back_vertic" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/darker_gray"
+        android:elevation="20dp"
+        app:layout_constraintStart_toStartOf="@id/g_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_descrip"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_for_k_c"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_kitsu_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/helvetica_regular"
+                android:text="@string/kitsu_score"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_average_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/helvetica_bold"
+                android:text="@string/_64"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_kitsu_score" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/im_star"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/star_for_rating"
+        android:src="@drawable/ic_detailed_star"
+        app:layout_constraintBottom_toBottomOf="@id/cv_score"
+        app:layout_constraintStart_toStartOf="@id/g_rank"
+        app:layout_constraintTop_toBottomOf="@id/tv_descrip" />
+
+    <TextView
+        android:id="@+id/tv_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:text="@string/rank_7691"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_score"
+        app:layout_constraintStart_toStartOf="@id/g_type"
+        app:layout_constraintTop_toBottomOf="@id/tv_descrip" />
+
+    <ImageView
+        android:id="@+id/im_like"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/heart_for_popularity"
+        android:src="@drawable/ic_popularity"
+        app:layout_constraintStart_toStartOf="@id/g_rank"
+        app:layout_constraintTop_toBottomOf="@id/im_star" />
+
+    <TextView
+        android:id="@+id/tv_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:text="@string/rank_204"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_score"
+        app:layout_constraintStart_toStartOf="@id/g_type"
+        app:layout_constraintTop_toBottomOf="@id/im_star" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_anime_trailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/white"
+        android:text="Link to You Tube"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_popular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_rating"
+        app:layout_constraintTop_toBottomOf="@+id/tv_descrip" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

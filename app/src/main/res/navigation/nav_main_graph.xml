@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_graph"
+    app:startDestination="@id/animeFragment">
+
+    <fragment
+        android:id="@+id/animeDetailedFragment"
+        android:name="com.example.kitsu.presentation.ui.fragments.main.anime.detailed.AnimeDetailedFragment"
+        android:label="fragment_anime_detailed"
+        tools:layout="@layout/fragment_anime_detailed">
+        <argument
+            android:name="animeId"
+            app:argType="string" />
+        <argument
+            android:name="animeVideoId"
+            app:argType="string"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/animeFragment"
+        android:name="com.example.kitsu.presentation.ui.fragments.main.anime.AnimeFragment"
+        android:label="fragment_anime"
+        tools:layout="@layout/fragment_anime">
+        <action
+            android:id="@+id/action_animeFragment_to_animeDetailedFragment"
+            app:destination="@id/animeDetailedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mangaFragment"
+        android:name="com.example.kitsu.presentation.ui.fragments.main.manga.MangaFragment"
+        android:label="fragment_manga"
+        tools:layout="@layout/fragment_manga">
+        <action
+            android:id="@+id/action_mangaFragment_to_mangaDetailedFragment"
+            app:destination="@id/mangaDetailedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mangaDetailedFragment"
+        android:name="com.example.kitsu.presentation.ui.fragments.main.manga.detailed.MangaDetailedFragment"
+        android:label="fragment_manga_detailed"
+        tools:layout="@layout/fragment_manga_detailed">
+
+        <argument
+            android:name="mangaId"
+            app:argType="string" />
+    </fragment>
+</navigation>
